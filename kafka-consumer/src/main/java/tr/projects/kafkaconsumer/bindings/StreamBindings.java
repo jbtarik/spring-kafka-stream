@@ -9,9 +9,9 @@ public interface StreamBindings {
     @Input("order-input-channel")
     KStream<String, Order> inputStream();
 
+    @Output("order-home-output-channel")
+    KStream<String, Order> homeDeliveryStream();
+
     @Output("order-takeaway-output-channel")
     KStream<String, Order> takeAwayStream();
-
-    @Output("order-homedelivery-output-channel")
-    KStream<String, Order> homeDeliveryStream();
 }
